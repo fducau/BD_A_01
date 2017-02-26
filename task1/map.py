@@ -28,7 +28,7 @@ p_header = ['summons_number', 'issue_date', 'violation_code',
 
 
 # input comes from STDIN (stream data that goes to the program)
-for i, entry in enumerate(csv.reader(sys.stdin, delimiter=',')):
+for entry in csv.reader(sys.stdin, delimiter=','):
 
     inp_file = os.environ.get('mapreduce_map_input_file')
 
