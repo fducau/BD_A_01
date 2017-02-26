@@ -1,9 +1,6 @@
 # !/usr/bin/python
 
 import sys
-import csv
-import os
-
 
 # Expected format if entry coming from
 # parking-violations:
