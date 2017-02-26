@@ -23,8 +23,8 @@ then
 else
 	echo "Task $1: Failed; no output generated."
 fi
-#rm -f "task$1/task$1tmp2.out"
-#rm -f "task$1/task$1tmp.out"
+rm -f "task$1/task$1tmp2.out"
+rm -f "task$1/task$1tmp.out"
 /usr/bin/hadoop fs -rm -r -f "task$1tmp.out"
 
 cd "$cdir"
