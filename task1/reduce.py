@@ -27,7 +27,7 @@ for line in sys.stdin:
         # If this is a new key and not the first key we've seen
         if currentkey:
             if in_p_dataset and not in_o_dataset:
-                print('{}\t{}'.format(currentkey, p_values))
+                print('{}\t{}'.format(currentkey, ', '.join(p_values[1:])))
 
             # Restart the boolean values
             in_o_dataset = values[0] == 'o'
@@ -56,4 +56,4 @@ for line in sys.stdin:
 # Compute/output result for the last key
 if in_p_dataset and not in_o_dataset:
     if currentkey:
-        print('{}\t{}'.format(currentkey, str(values[1:])))
+        print('{}\t{}'.format(currentkey, ', '.join(values[1:])))

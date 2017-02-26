@@ -45,4 +45,4 @@ for i, entry in enumerate(csv.reader(sys.stdin, delimiter=',')):
 
     elif 'open' in inp_file:
         key = entry[o_header.index('summons_number')]
-        print('{}\t o')
+        print('{}\to')
