@@ -47,6 +47,8 @@ for line in sys.stdin:
         if values[0] == 'p':
             in_p_dataset = True
 
+    currentkey = key
+
 # Compute/output result for the last key
 if in_p_dataset and not in_o_dataset:
     if currentkey:
