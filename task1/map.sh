@@ -14,3 +14,11 @@
 . /etc/profile.d/modules.sh
 module load python
 python task1/map.py
+
+
+
+hjs -D mapreduce.job.reduces=2 -files \
+/home/fnd212/BD/BD_A_01/task1 -mapper task1/map.py \
+-reducer task1/reduce.py -input \
+/user/ecc290/HW1data/parking-violations.csv,/user/ecc290/HW1data/open-violations.csv \
+-output /user/fnd212/task1.out
