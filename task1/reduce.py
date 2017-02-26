@@ -27,25 +27,29 @@ for line in sys.stdin:
         # If this is a new key and not the first key we've seen
         if currentkey:
             if in_p_dataset and not in_o_dataset:
-                print('{}\t{}'.format(currentkey, values))
+                print('{}\t{}'.format(currentkey, p_values))
 
             # Restart the boolean values
             in_o_dataset = values[0] == 'o'
             in_p_datsaet = values[0] == 'p'
+            if in_p_dataset:
+                p_values = values
 
         # If is the first key
         else:
             if values[0] == 'o':
                 in_o_dataset = True
-            if values[0] == 'p':
+            elif values[0] == 'p':
                 in_p_dataset = True
+                p_values = values
 
     # If we continue on the same key
     else:
         if values[0] == 'o':
             in_o_dataset = True
-        if values[0] == 'p':
+        elif values[0] == 'p':
             in_p_dataset = True
+            p_values = values
 
     currentkey = key
 
