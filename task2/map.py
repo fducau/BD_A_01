@@ -20,5 +20,5 @@ p_header = ['summons_number', 'issue_date', 'violation_code',
 for entry in csv.reader(sys.stdin, delimiter=','):
 
     key = entry[p_header.index('violation_code')]
-    print('{}\t1'.format(key))
+    print('{1}\t1'.format(key))
 
