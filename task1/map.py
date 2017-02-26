@@ -1,46 +1,48 @@
 # !/usr/bin/env python
-# map function for matrix multiply
-# Input file assumed to have lines of the form "A,i,j,x",
-# where i is the row index, j is the column index, and x is the
-# value in row i, column j of A. Entries of A are followed by
-# lines of the form "B,i,j,x" for the matrix B.
-# It is assumed that the matrix dimensions are such that
-# the product A*B exists.
-
-# Input arguments:
-# m should be set to the number of rows in A, p should be set to
-# the number of columns in B.
 
 import sys
-# import string
-# import numpy
+import csv
+import os
+# cat matsmall.txt | python src/map.py 2 3 | sort -n | python src/reduce.py 5
 
-# number of rows in A
-m = int(sys.argv[1])
 
-# number of columns in B
-p = int(sys.argv[2])
+
+o_header = ['summons_number', 'plate',
+            'license_type',
+            'county', 'state', 'prescint',
+            'issuing_agency', 'violation',
+            'violation_status', 'issue_date',
+            'violation_time', 'judgment_entry_date',
+            'amount_due', 'payment_amount',
+            'penalty_amount', 'fine_amount',
+            'interest_amount', 'reduction_amount']
+
+p_header = ['summons_number', 'issue_date', 'violation_code',
+            'violation_county', 'violation_description',
+            'violation_location', 'violation_precint',
+            'violation_time', 'time_first_observed',
+            'meter_number', 'issue_code', 'issuer_precinct',
+            'issuing_agency', 'plate_id', 'plate_type',
+            'registration_state', 'street_name',
+            'vehicle_body_type', 'vehicle_color',
+            'vehicle_make', 'vehicle_year']
 
 
 # input comes from STDIN (stream data that goes to the program)
-for line in sys.stdin:
-    # Remove leading and trailing whitespace
-    line = line.strip()
+for i, entry in enumerate(csv.reader(sys.stdin, delimiter=',')):
 
-    # Split line into array of entry data
-    entry = line.split(",")
+    inp_file = os.environ.get('mapreduce_map_input_file')
 
-    # Set row, column, and value for this entry
-    row = int(entry[1])
-    col = int(entry[2])
-    value = float(entry[3])
+    if 'parking' in inp_file:
+        key = entry[p_header.index('summons_number')]
+        plate_id = entry[p_header.index('plate_id')]
+        violation_precint = entry[p_header.index('violation_precint')]
+        violation_code = entry[p_header.index('violation_code')]
+        issue_date = entry[p_header.index('issue_date')]
 
-    # If this is an entry in matrix A...
-    if (entry[0] == "A"):
-        for i in range(p):
-            print '{} {}\tA {} {}'.format(row, i, col, value)
+        print('{}\tp, {}, {}, {}, {}'.format(key, plate_id, violation_precint,
+                                             violation_code, issue_date))
 
-    # Otherwise, if this is an entry in matrix B...
-    else:
-        for i in range(m):
-            print '{} {}\tB {} {}'.format(i, col, row, value)
+    elif 'open' in inp_file:
+        key = entry[o_header.index('summons_number')]
+        print('{}\t o')
