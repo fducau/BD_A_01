@@ -1,6 +1,6 @@
 
-#/usr/bin/hadoop fs -get /user/ecc290/HW1data/parking-violations.csv
-#/usr/bin/hadoop fs -get /user/ecc290/HW1data/open-violations.csv
+/usr/bin/hadoop fs -get /user/ecc290/HW1data/parking-violations.csv
+/usr/bin/hadoop fs -get /user/ecc290/HW1data/open-violations.csv
 
 rm -r -f results
 mkdir results
