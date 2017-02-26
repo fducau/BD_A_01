@@ -27,7 +27,7 @@ for line in sys.stdin:
 
             # Restart the boolean values
             in_o_dataset = values[0] == 'o'
-            in_p_datsaet = values[0] == 'p'
+            in_p_dataset = values[0] == 'p'
             if in_p_dataset:
                 p_values = values
 
