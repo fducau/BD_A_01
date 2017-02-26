@@ -22,7 +22,6 @@ for line in sys.stdin:
     key, values = line.split('\t', 1)
     values = values.split(', ')
 
-    # Otherwise, if this is a new key...
     if key != currentkey:
         # If this is a new key and not the first key we've seen
         if currentkey:
@@ -56,4 +55,4 @@ for line in sys.stdin:
 # Compute/output result for the last key
 if in_p_dataset and not in_o_dataset:
     if currentkey:
-        print('{}\t{}'.format(currentkey, ', '.join(values[1:])))
+        print('{}\t{}'.format(currentkey, ', '.join(p_values[1:])))
