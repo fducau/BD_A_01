@@ -24,7 +24,7 @@ for line in sys.stdin:
             counter += value
         else:
             # Generate output
-            print('{1}\t{2}'.format(currentkey, counter))
+            print('{0}\t{1}'.format(currentkey, counter))
             # Restart counter
             counter = value
     else:
@@ -33,4 +33,4 @@ for line in sys.stdin:
     currentkey = key
 
 # Compute/output result for the last key
-print('{1}\t{2}'.format(currentkey, counter))
+print('{0}\t{1}'.format(currentkey, counter))
