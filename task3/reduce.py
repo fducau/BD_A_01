@@ -26,8 +26,8 @@ for line in sys.stdin:
             counter += 1
         else:
             # Generate output
-            print('{}\t{:.2}, {:.2}'.format(currentkey,
-                                            total, total / counter))
+            print('{}\t{:.2f}, {:.2f}'.format(currentkey,
+                                              total, total / counter))
             # Restart counter
             total = value
             counter = 1
@@ -39,5 +39,5 @@ for line in sys.stdin:
     currentkey = key
 
 # Compute/output result for the last key
-print('{}\t{:.2}, {:.2}'.format(currentkey,
-                                total, total / counter))
+print('{}\t{:.2f}, {:.2f}'.format(currentkey,
+                                  total, total / counter))
