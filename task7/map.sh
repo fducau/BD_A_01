@@ -5,7 +5,7 @@
 # the relevant modules
 
 # Call:
-# hjs -D mapreduce.job.reduces=3 -files \
+# hjs -D mapreduce.job.reduces=2 -files \
 # /home/fnd212/BD/BD_A_01/task7 -mapper task7/map.sh \
 # -reducer task7/reduce.sh -input \
 # /user/ecc290/HW1data/parking-violations.csv \

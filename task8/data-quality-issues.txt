@@ -1,0 +1,24 @@
+===================
+Parking Violations
+===================
+- Different ways to encode null values. For example, null values in 
+vehicle_make are represented by a missing value (empty string) while missing
+values in vehicle_year are represented by a 0. 
+Other case happens with the meter_number, which can be a valid string,
+a '-' or a missing value (empty string). No clear difference to what is the
+difference between missing and '-'. 
+
+- violation_description column contains, in some cases the violation_code. For example:
+an entry in violation_description '14-No Standing' has the violation_code (14)
+in it.
+
+
+===================
+Between Datasets
+===================
+- In open violations the plate is identified as 'plate' while in 
+parking violations is identified as 'plate_number'.
+
+- Violation description in open violations is encoded differently than in 
+parking violations. Furthermoire in the first one the column is called 'violation'
+while in the second one 'violation_description'
