@@ -19,4 +19,4 @@ for entry in csv.reader(sys.stdin, delimiter=','):
 
     key = entry[o_header.index('license_type')]
     value = entry[o_header.index('amount_due')]
-    print('{}\t{}'.format(key, value))
+    print('{0}\t{1}'.format(key, value))
