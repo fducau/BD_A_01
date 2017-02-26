@@ -6,10 +6,10 @@
 
 # Call:
 # hjs -D mapreduce.job.reduces=2 -files \
-#		/home/fnd212/BD/BD_A_01/task1 -mapper task1/map.sh \
-#		-reducer task1/reduce.sh -input \
-#		/user/ecc290/HW1data/parking-violations.csv,/user/ecc290/HW1data/open-violations.csv \
-#		-output /user/fnd212/task1.out
+#		/home/fnd212/BD/BD_A_01/task2 -mapper task2/map.sh \
+#		-reducer task2/reduce.sh -input \
+#		/user/ecc290/HW1data/parking-violations.csv \
+#		-output /user/fnd212/task2.out
 
 . /etc/profile.d/modules.sh
 module load python
