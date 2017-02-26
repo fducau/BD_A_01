@@ -6,5 +6,5 @@
 
 . /etc/profile.d/modules.sh
 module load python
-task1/reduce.py
+python task1/reduce.py
 
