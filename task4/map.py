@@ -19,7 +19,7 @@ p_header = ['summons_number', 'issue_date', 'violation_code',
 for entry in csv.reader(sys.stdin, delimiter=','):
 
     key = entry[p_header.index('registration_state')]
-    value = entry[p_header.index('1')]
+    value = '1'
     if key == 'NY':
         print('{}\t{}'.format(key, value))
     else:
