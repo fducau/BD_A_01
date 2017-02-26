@@ -39,9 +39,9 @@ for i, entry in enumerate(csv.reader(sys.stdin, delimiter=',')):
         violation_code = entry[p_header.index('violation_code')]
         issue_date = entry[p_header.index('issue_date')]
 
-        print('{}\tp, {}, {}, {}, {}'.format(key, plate_id, violation_precint,
-                                             violation_code, issue_date))
+        print('{0}\tp, {1}, {2}, {3}, {4}'.format(key, plate_id, violation_precint,
+                                                  violation_code, issue_date))
 
     elif 'open' in inp_file:
         key = entry[o_header.index('summons_number')]
-        print('{}\to'.format(key))
+        print('{0}\to'.format(key))
