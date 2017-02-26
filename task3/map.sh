@@ -13,4 +13,4 @@
 
 . /etc/profile.d/modules.sh
 module load python
-python task2/map.py
+python task3/map.py
