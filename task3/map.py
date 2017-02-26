@@ -1,5 +1,12 @@
 #!/usr/bin/python
 
+# Call:
+# hjs -D mapreduce.job.reduces=2 -files \
+# /home/fnd212/BD/BD_A_01/task3 -mapper task3/map.py \
+# -reducer task3/reduce.py -input \
+# /user/ecc290/HW1data/open-violations.csv \
+# -output /user/fnd212/task3/task3.out
+
 import sys
 import csv
 

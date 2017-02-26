@@ -1,8 +1,14 @@
 #!/usr/bin/python
 
+# Call:
+# hjs -D mapreduce.job.reduces=2 -files \
+# /home/fnd212/BD/BD_A_01/task2 -mapper task2/map.py \
+# -reducer task2/reduce.py -input \
+# /user/ecc290/HW1data/parking-violations.csv \
+# -output /user/fnd212/task2/task2.out
+
 import sys
 import csv
-# cat matsmall.txt | python src/map.py 2 3 | sort -n | python src/reduce.py 5
 
 p_header = ['summons_number', 'issue_date', 'violation_code',
             'violation_county', 'violation_description',

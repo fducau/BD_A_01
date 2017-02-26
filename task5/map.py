@@ -1,5 +1,12 @@
 #!/usr/bin/python
 
+# Call:
+# hjs -D mapreduce.job.reduces=1 -files \
+# /home/fnd212/BD/BD_A_01/task5 -mapper task5/map.py \
+# -reducer task5/reduce.py -input \
+# /user/ecc290/HW1data/parking-violations.csv \
+# -output /user/fnd212/task5/task5.out
+
 import sys
 import csv
 
