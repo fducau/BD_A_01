@@ -21,4 +21,4 @@ for entry in csv.reader(sys.stdin, delimiter=','):
     key1 = entry[p_header.index('plate_id')]
     key2 = entry[p_header.index('registration_state')]
     value = '1'
-    print('{}, {}\t{}'.format(key1, key2, value))
+    print('{0}, {1}\t{2}'.format(key1, key2, value))

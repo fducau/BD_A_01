@@ -22,4 +22,4 @@ for entry in csv.reader(sys.stdin, delimiter=','):
     key = entry[p_header.index('violation_code')]
     date = entry[p_header.index('issue_date')]
     number = '1'
-    print('{}\t{}, {}'.format(key, date, number))
+    print('{0}\t{1}, {2}'.format(key, date, number))

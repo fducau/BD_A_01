@@ -40,4 +40,4 @@ if counter > max_violations:
     max_key = currentkey
     max_violations = counter
 
-print('{}\t{}'.format(max_key, max_violations))
+print('{0}\t{1}'.format(max_key, max_violations))

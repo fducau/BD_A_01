@@ -21,6 +21,6 @@ for entry in csv.reader(sys.stdin, delimiter=','):
     key = entry[p_header.index('registration_state')]
     value = '1'
     if key == 'NY':
-        print('{}\t{}'.format(key, value))
+        print('{0}\t{1}'.format(key, value))
     else:
-        print('{}\t{}'.format('Other', value))
+        print('{0}\t{1}'.format('Other', value))

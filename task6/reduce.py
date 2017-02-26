@@ -47,5 +47,5 @@ if counter > min(max_violations):
 
 while max_violations:
     ixmax = max_violations.index(max(max_violations))
-    print('{}\t{}'.format(max_keys[ixmax], max_violations[ixmax]))
+    print('{0}\t{1}'.format(max_keys[ixmax], max_violations[ixmax]))
     max_violations.pop(ixmax)

@@ -37,8 +37,8 @@ for line in sys.stdin:
         else:
             weekend_avg = 1.0 * weekend_violations / weekend_days
             week_avg = 1.0 * week_violations / week_days
-            print('{}\t{:.2f}, {:.2f}'.format(currentkey, weekend_avg,
-                                              week_avg))
+            print('{0}\t{1:.2f}, {2:.2f}'.format(currentkey, weekend_avg,
+                                                 week_avg))
 
             # Restart counters
             total = value
@@ -61,5 +61,5 @@ for line in sys.stdin:
 # Compute/output result for the last key
 weekend_avg = 1.0 * weekend_violations / weekend_days
 week_avg = 1.0 * week_violations / week_days
-print('{}\t{:.2f}, {:.2f}'.format(currentkey, weekend_avg,
-                                  week_avg))
+print('{0}\t{1:.2f}, {2:.2f}'.format(currentkey, weekend_avg,
+                                     week_avg))
