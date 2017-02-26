@@ -9,8 +9,8 @@ N = 20
 
 currentkey = None
 counter = 0
-max_keys = [None]*N
-max_violations = [- float('inf')]*N
+max_keys = [None] * N
+max_violations = [- float('inf')] * N
 
 for line in sys.stdin:
 
@@ -49,3 +49,4 @@ while max_violations:
     ixmax = max_violations.index(max(max_violations))
     print('{0}\t{1}'.format(max_keys[ixmax], max_violations[ixmax]))
     max_violations.pop(ixmax)
+    max_keys.pop(ixmax)
